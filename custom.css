@@ -1,0 +1,49 @@
+html {
+  font-family: Verdana;
+}
+  
+#contenedor {
+  float: left;
+  margin-left: 18px;
+  width: 800px;
+  background-color: #c3afe99a;
+  font-size: large;
+}
+
+#contenedor #fila #columna #accordion {
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+#contenedor #fila #columna #ultimo{
+  margin-bottom: 40px;
+}
+
+#contenedor #fila #columna .card {
+  margin-left: 40px;
+}
+
+#pagination {
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+#formulario {
+  float: left;
+  padding: 30px;
+}
+
+#contenedor #fila #columna #boton {
+  color: white;
+  font-size: large;
+}
+
+#progreso {
+  font-size: large;
+}
+
+#alerta {
+  float: left;
+  margin-top: 18px;
+  margin-left: 18px;
+}
