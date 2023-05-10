@@ -1,34 +1,36 @@
-function guardarFormulario() {
-  const formulario = document.getElementById('formulario');
+const http = require('http');
+const fs = require('fs');
 
-  // Obtener los valores del formulario
-  const nombre = formulario.getElementById('nombre').value;
-  const apellidos = formulario.getElementById('apellidos').value;
-  const correo = formulario.getElementById('correo').value;
-  const entrenamiento = formulario.getElementById('entrenamiento').value;
-  const comentario = formulario.getElementById('comentario').value;
-  
-  // Crear un objeto JSON
-  const peticion = {
-    nombre: nombre,
-    apellidos: apellidos,
-    correo: correo,
-    entrenamiento: entrenamiento,
-    comentario: comentario
-  };
-  
-  // Convertir el objeto JSON a una cadena JSON
-  const JSON = JSON.stringify(peticion);
+const servidor = http.createServer((req, res) => {
+  if (req.method === 'post' && req.url === '/guardar-peticion') {
+    let cuerpo = '';
 
-  // Definir el nombre de archivo dinámico
-  const nombreArchivoJSON = 'peticion-' + new Date().toISOString() + '.json';
+    req.on('data', (chunk) => {
+      cuerpo += chunk.toString();
+    });
 
-  // Escribir la cadena JSON en un archivo con nombre dinámico
-  fs.writeFile('./bbdd/' + nombreArchivoJSON, JSON, (error) => {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log('La petición ' + nombreArchivoJSON + ' se ha guardado exitosamente');
-    }
-  });
-}
+    req.on('end', () => {
+      const datos = JSON.parse(cuerpo);
+
+      const archivo = 'peticion-' + new Date().toISOString() + '.json';
+
+      fs.createFile('./bbdd/' + archivo, JSON.stringify(datos) + '\n', (error) => {
+        if (error) {
+          console.error(error);
+          res.statusCode = 500;
+          res.end('Ha ocurrido un error al intentar guardar los datos');
+        } else {
+          res.statusCode = 200;
+          res.end('Los datos se han guardado exitosamente');
+        }
+      });
+    });
+  } else {
+    res.statusCode = 404;
+    res.end('No se encontró la página solicitada');
+  }
+});
+
+servidor.listen(3000, () => {
+  console.log('Servidor escuchando en el puerto 3000');
+});
