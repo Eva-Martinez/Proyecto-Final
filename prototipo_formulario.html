@@ -68,7 +68,7 @@
     </nav>
   </head>
   <body>
-    <form id="formulario" method="post" action="/guardar-peticion">
+    <form id="formulario">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre*</label>
         <input type="text" class="form-control" id="nombre" required pattern="[A-Za-z]+" title="Ingrese un nombre válido">
@@ -98,9 +98,35 @@
         <label for="politica" class="form-check-label">Acepta la política de privacidad</label>
         <input type="checkbox" class="form-check-input" id="politica" required>
       </div>
-      <script id="guardar-formulario" src="guardar_formulario_servidor.js" type="text/javascript"></script>
-      <button type="submit" class="btn btn-primary" onclick="guardarFormulario()">Enviar Petición</button>
-      <div id="formulario1"></div>
+      <button class="btn btn-primary" onclick="guardar()">Enviar Petición</button>
     </form>
+    <script>
+      function guardar() {
+        // Recupera los valores de los campos del formulario
+        var datosFormulario = {
+          nombreUsuario: document.getElementById('nombre').value,
+          apellidosUsuario: document.getElementById('apellidos').value,
+          correoUsuario: document.getElementById('correo').value,
+          entrenamientoUsuario: document.getElementById('entrenamiento').value,
+          comentarioUsuario: document.getElementById('comentario').value,
+          politicaUsuario: document.getElementById('politica').value,
+        }
+      
+        // Convierte los datos en una cadena JSON
+        var datosJSON = JSON.stringify(datosFormulario);
+      
+        // Crea un objeto Blob con los datos JSON
+        var blob = new Blob([datosJSON], {type: "application/json"});
+      
+        // Crea un objeto URL con el objeto Blob
+        var url = URL.createObjectURL(blob);
+      
+        // Crea un enlace de descarga y haz clic en él para descargar el archivo
+        var enlaceDescarga = document.createElement('a');
+        enlaceDescarga.setAttribute('href', url);
+        enlaceDescarga.setAttribute('download', `datosFormulario_${new Date().toISOString()}.json`);
+        enlaceDescarga.click();
+      }
+    </script>
   </body>
 </html>
