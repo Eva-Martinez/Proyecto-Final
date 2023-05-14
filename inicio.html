@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link media="screen" href="./custom.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./docs/Logo.png" type="image/x-icon">
+    <title>Inicio - Home Workout</title>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./docs/Logo.png" alt="Logo" width="auto" height="50" class="d-inline-block align-text-middle">
+          &nbsp;&nbsp;Home Workout
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./inicio/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./inicio/formulario.html">Formulario</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Enlaces
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item nav-link" href="https://github.com/Eva-Martinez" target="_blank">Perfil GitHub Eva</a></li>
+                <li><a class="dropdown-item nav-link" href="https://github.com/Adrian-glz01" target="_blank">Perfil GitHub Adrián</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="./inicio/busqueda_avanzada.html">
+                <img id="busqueda" src="./docs/Lupa.png" alt="Lupa" width="40" height="40" class="d-inline-block align-text-right">
+              </a>  
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </head>
+  <body>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb" id="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+      </ol>
+    </nav>
+    <div id="carousel" class="carousel slide carousel-fade">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./docs/Entrenamiento desde casa unisex.jpg" class="d-block w-100" alt="Entrenamiento unisex">
+        </div>
+        <div class="carousel-item">
+          <img src="./docs/Entrenamiento desde casa femenino.jpg" class="d-block w-100" alt="Entrenamiento femenino">
+        </div>
+      </div>
+      <button id="prev" class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="./inicio/mapa_web.html" class="nav-link px-2 text-muted">Mapa Web</a></li>
+          <li class="nav-item"><a href="./inicio/accesibilidad.html" class="nav-link px-2 text-muted">Accesibilidad</a></li>
+          <li class="nav-item"><a href="./inicio/contacto.html" class="nav-link px-2 text-muted">Contacto</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2023 Home Workout</p>
+      </footer>
+    </div>
+  </body>
+</html>

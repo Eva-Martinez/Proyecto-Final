@@ -2,48 +2,110 @@ html {
   font-family: Verdana;
 }
   
-#contenedor {
-  float: left;
-  margin-left: 18px;
-  width: 800px;
-  background-color: #c3afe99a;
-  font-size: large;
-}
-
-#contenedor #fila #columna #accordion {
-  margin-right: 20px;
-  margin-left: 15px;
-}
-
-#contenedor #fila #columna #ultimo{
-  margin-bottom: 40px;
-}
-
-#contenedor #fila #columna .card {
-  margin-left: 40px;
-}
-
-#pagination {
-  margin-top: 15px;
-  margin-right: 20px;
+#breadcrumb {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 #formulario {
+  float: top;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#busqueda {
+margin-left: 10px;
+}
+
+#tonificar {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#adelgazar {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#fuerza {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#forma {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#carlos {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#daniela {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#david {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#paula {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#ninguno {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#inicial {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+#profesional {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-family: Verdana;
+}
+
+.b-example-divider {
   float: left;
-  padding: 30px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 60.1vh;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, .1), inset 0 0.125em 0.5em rgba(0, 0, 0, .15);
 }
 
-#contenedor #fila #columna #boton {
-  color: white;
-  font-size: large;
-}
-
-#progreso {
-  font-size: large;
-}
-
-#alerta {
+.flex-shrink-0 {
   float: left;
-  margin-top: 18px;
-  margin-left: 18px;
+}
+
+#form {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#resultados {
+  margin-top: 20px;
+  height: 50.2vh;
 }
