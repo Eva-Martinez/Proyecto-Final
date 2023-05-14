@@ -138,3 +138,9 @@ margin-left: 10px;
 #enlace_inicio {
   margin-top: 20px;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
