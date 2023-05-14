@@ -109,3 +109,32 @@ margin-left: 10px;
   margin-top: 20px;
   height: 50.2vh;
 }
+
+#separacion {
+  margin-top: 20px;
+  height: 57vh;
+}
+
+.card {
+  display: flex;
+  text-align: center;
+  float: left;
+  margin-top: 50px;
+}
+
+.accordion {
+  margin: 50px;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: rgb(43,48,53) !important;
+  color: white !important;
+}
+
+.accordion-body a {
+  color: rgb(43,48,53);
+}
+
+#enlace_inicio {
+  margin-top: 20px;
+}
