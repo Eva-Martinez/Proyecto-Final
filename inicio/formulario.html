@@ -73,7 +73,7 @@
         <select class="form-control" id="entrenamiento" required>
           <option value="tonificar">Tonificar</option>
           <option value="adelgazar">Adelgazar</option>
-          <option value="en-forma">Mantener en forma</option>
+          <option value="mantener_en_forma">Mantener en forma</option>
           <option value="fuerza">Aumentar fuerza</option>
         </select>
       </div>
@@ -82,10 +82,31 @@
         <input type="text" class="form-control" id="comentario">
       </div>
       <div class="mb-3 form-check">
-        <label for="politica" class="form-check-label">Acepta la política de privacidad</label>
+        <label for="politica" class="form-check-label">Política de privacidad*</label>
         <input type="checkbox" class="form-check-input" id="politica" required>
       </div>
-      <button type="submit" class="btn btn-primary" onclick="guardar()">Enviar Petición</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Enviar formulario
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Descarga</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ¿Desea descargar los datos del formulario?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" onclick="guardar()">Descargar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--CLOSE MODAL-->
     </form>
     <script>
       function guardar() {
@@ -97,26 +118,55 @@
           entrenamientoUsuario: document.getElementById('entrenamiento').value,
           comentarioUsuario: document.getElementById('comentario').value,
           politicaUsuario: document.getElementById('politica').value,
+        };
+
+        // Construye el texto del archivo de texto
+        var textoArchivo = `Ha querido recibir los servicios con los planes de entrenamiento para ${datosFormulario.entrenamientoUsuario}.\n\n`;
+
+        if (datosFormulario.entrenamientoUsuario === 'tonificar') {
+          textoArchivo += 'Le recomendamos que siga los entrenamientos del monitor Adrián González o Chris Bumstead\n\n';
+        } else if (datosFormulario.entrenamientoUsuario === 'adelgazar') {
+          textoArchivo += 'Le recomendamos que siga los entrenamientos de rutias cardiovasculares de Amanda Expósito\n\n';
+        } else if (datosFormulario.entrenamientoUsuario === 'mantener_en_forma') {yo
+          textoArchivo += 'Le recomendamos que siga los entrenamientos de la monitoria Eva Martínez\n\n';
+        } else if (datosFormulario.entrenamientoUsuario === 'fuerza') {
+          textoArchivo += 'Le recomendamos que siga los entrenamientos de la monitora Ana Bencomo\n\n';
+        } else {
+          textoArchivo += 'No ha sugerido nada en su ideologia de entrenamiento.\n\n';
         }
-      
-        // Convierte los datos en una cadena JSON
-        var datosJSON = JSON.stringify(datosFormulario);
-      
-        // Crea un objeto Blob con los datos JSON
-        var blob = new Blob([datosJSON], {type: "application/json"});
-      
+
+        // Datos del usuario
+        textoArchivo += "Datos del usuario:\n";
+        textoArchivo += `Nombre: ${datosFormulario.nombreUsuario}\n`;
+        textoArchivo += `Apellidos: ${datosFormulario.apellidosUsuario}\n`;
+        textoArchivo += `Correo: ${datosFormulario.correoUsuario}\n`;
+        textoArchivo += `Comentario: ${datosFormulario.comentarioUsuario}\n\n`;
+        //textoArchivo += `Política: ${datosFormulario.politicaUsuario}\n\n`;
+
+        // Datos de la empresa
+        textoArchivo += "Datos de la empresa:\n";
+        textoArchivo += "Nombre: Home Workout\n";
+        textoArchivo += "Dirección: Calle de la Virtud, 69\n";
+        textoArchivo += "Teléfono: 696 696 696\n";
+        textoArchivo += "Correo: homeworkout@usabilidadweb.es\n";
+
+        // Crea un objeto Blob con el texto del archivo
+        var blob = new Blob([textoArchivo], {type: "text/plain"});
+
         // Crea un objeto URL con el objeto Blob
         var url = URL.createObjectURL(blob);
-      
+
         // Crea un enlace de descarga y haz clic en él para descargar el archivo
-        var enlaceDescarga = document.createElement('a');
-        enlaceDescarga.setAttribute('href', url);
-        enlaceDescarga.setAttribute('download', `datosFormulario_${new Date().toISOString()}.json`);
-        enlaceDescarga.click();
+        if(datosFormulario.politicaUsuario === 'on') {
+          var enlaceDescarga = document.createElement('a');
+          enlaceDescarga.setAttribute('href', url);
+          enlaceDescarga.setAttribute('download', `datosFormulario_${new Date().toISOString()}.txt`);
+          enlaceDescarga.click();
+        }
       }
     </script>
     <div class="container">
-      <footer class="footer">
+      <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item"><a href="./mapa_web.html" class="nav-link px-2 text-muted">Mapa Web</a></li>
           <li class="nav-item"><a href="./accesibilidad.html" class="nav-link px-2 text-muted">Accesibilidad</a></li>

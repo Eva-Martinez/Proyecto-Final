@@ -1,5 +1,5 @@
 html {
-  font-family: Verdana;
+  font-family: Verdana !important;
 }
   
 body {
@@ -23,100 +23,15 @@ body {
   margin-left: 10px;
 }
 
-#tonificar {
+ul .btn-toggle-nav {
   margin-left: 20px;
   margin-right: 10px;
-  font-family: Verdana;
-}
-
-#adelgazar {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#fuerza {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#forma {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#carlos {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#daniela {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#david {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#paula {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#ninguno {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#inicial {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-#profesional {
-  margin-left: 20px;
-  margin-right: 10px;
-  font-family: Verdana;
-}
-
-.b-example-divider {
-  margin-right: 20px;
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 60.1vh;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, .1), inset 0 0.125em 0.5em rgba(0, 0, 0, .15);
-}
-
-.flex-shrink-0 {
-  float: left;
+  font-size: 15px;
 }
 
 #form {
   margin-top: 20px;
   margin-right: 20px;
-}
-
-#resultados {
-  margin-top: 20px;
-  height: 50.2vh;
-}
-
-#separacion {
-  margin-top: 20px;
-  height: 57vh;
 }
 
 .card {
@@ -126,11 +41,6 @@ body {
   margin-top: 50px;
 }
 
-.accordion {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
 .accordion-button:not(.collapsed){
   background-color: rgb(43,48,53) !important;
   color: white !important;
@@ -138,8 +48,4 @@ body {
 
 .accordion-body a {
   color: rgb(43,48,53);
-}
-
-#enlace_inicio {
-  margin-top: 20px;
 }
