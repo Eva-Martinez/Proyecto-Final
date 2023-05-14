@@ -2,20 +2,25 @@ html {
   font-family: Verdana;
 }
   
+body {
+  margin: 0;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr;
+}
+
 #breadcrumb {
   margin-top: 20px;
   margin-left: 20px;
-  margin-bottom: 20px;
 }
 
 #formulario {
-  float: top;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #busqueda {
-margin-left: 10px;
+  margin-left: 10px;
 }
 
 #tonificar {
@@ -85,7 +90,6 @@ margin-left: 10px;
 }
 
 .b-example-divider {
-  float: left;
   margin-right: 20px;
   flex-shrink: 0;
   width: 1.5rem;
@@ -123,7 +127,8 @@ margin-left: 10px;
 }
 
 .accordion {
-  margin: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .accordion-button:not(.collapsed){
@@ -137,10 +142,4 @@ margin-left: 10px;
 
 #enlace_inicio {
   margin-top: 20px;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
