@@ -12,14 +12,14 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../inicio.html">
-          <img src="../docs/Logo.png" alt="Logo" width="auto" height="50" class="d-inline-block align-text-middle">
+          <img src="../docs/Logo.png" alt="Logo" height="50" class="d-inline-block align-text-middle">
           &nbsp;&nbsp;Home Workout
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul id="" class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link " href="../inicio.html">Inicio</a>
             </li>
@@ -40,7 +40,7 @@
             </li>
             <li class="nav-item">
               <a class="navbar-brand" href="./busqueda_avanzada.html">
-                <img id="busqueda" src="../docs/Lupa.png" alt="Lupa" width="40" height="40" class="d-inline-block align-text-right">
+                <img id="busqueda" src="../docs/Lupa.png" alt="Búsqueda avanzada" width="40" height="40" class="d-inline-block align-text-right">
               </a>  
             </li>
           </ul>
@@ -55,6 +55,7 @@
         <li class="breadcrumb-item"><a class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#">Formulario</a></li>
       </ol>
     </nav>
+    <h1 style="margin-left: 20px;">Formulario</h1>
     <form id="formulario">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre*</label>
@@ -70,12 +71,11 @@
       </div>
       <div class="mb-3">
         <label for="entrenamiento">Seleccione un entrenamiento*</label>
-        <select class="form-control" id="entrenamiento" required>
+        <select class="form-control" id="entrenamiento" size="4" required>
           <option value="tonificar">Tonificar</option>
           <option value="adelgazar">Adelgazar</option>
           <option value="mantener_en_forma">Mantener en forma</option>
           <option value="fuerza">Aumentar fuerza</option>
-          </option>
         </select>
       </div>
       <div class="mb-3">
@@ -173,7 +173,7 @@
           <li class="nav-item"><a href="./accesibilidad.html" class="nav-link px-2 text-muted">Accesibilidad</a></li>
           <li class="nav-item"><a href="./contacto.html" class="nav-link px-2 text-muted">Contacto</a></li>
         </ul>
-        <p class="text-center text-muted">© 2023 Home Workout</p>
+        <p class="text-center text-muted" tabindex="0">© 2023 Home Workout</p>
       </footer>
     </div>
   </body>
