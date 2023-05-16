@@ -124,14 +124,14 @@
         // Construye el texto del archivo de texto
         var textoArchivo = `Ha querido recibir los servicios con los planes de entrenamiento para ${datosFormulario.entrenamientoUsuario}.\n\n`;
 
-        if (datosFormulario.entrenamientoUsuario === 'tonificar') {
-          textoArchivo += 'Le recomendamos que siga los entrenamientos del monitor Adrián González o Chris Bumstead\n\n';
-        } else if (datosFormulario.entrenamientoUsuario === 'adelgazar') {
-          textoArchivo += 'Le recomendamos que siga los entrenamientos de rutias cardiovasculares de Amanda Expósito\n\n';
-        } else if (datosFormulario.entrenamientoUsuario === 'mantener_en_forma') {yo
-          textoArchivo += 'Le recomendamos que siga los entrenamientos de la monitoria Eva Martínez\n\n';
-        } else if (datosFormulario.entrenamientoUsuario === 'fuerza') {
-          textoArchivo += 'Le recomendamos que siga los entrenamientos de la monitora Ana Bencomo\n\n';
+        if (datosFormulario.entrenamientoUsuario == 'tonificar') {
+          textoArchivo += 'Le recomendamos que siga los entrenamientos del monitor Adrián González o Chris Bumstead.\n\n';
+        } else if (datosFormulario.entrenamientoUsuario == 'adelgazar') {
+          textoArchivo += 'Le recomendamos que siga los entrenamientos de la monitora Amanda Expósito.\n\n';
+        } else if (datosFormulario.entrenamientoUsuario == 'mantener_en_forma') {
+          textoArchivo += 'Le recomendamos que siga los entrenamientos de la monitoria Eva Martínez.\n\n';
+        } else if (datosFormulario.entrenamientoUsuario == 'fuerza') {
+          textoArchivo += 'Le recomendamos que siga los entrenamientos de la monitora Ana Bencomo.\n\n';
         } else {
           textoArchivo += 'No ha sugerido nada en su ideologia de entrenamiento.\n\n';
         }
